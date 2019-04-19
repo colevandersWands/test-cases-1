@@ -6,6 +6,7 @@
 * [describing behavior](#describing-behavior)
 * [run\_tests function](#run--tests-function)
 * [examples to study](#examples-to-study)
+    * [failing test cases](#failing-test-cases)
     * [plus](#plus)
     * [loose equality](#loose-equality)
 * [exercises](#exercises)
@@ -88,6 +89,23 @@ function run_tests(_target, _cases) {
 
 ## Examples to Study
 
+### Failing Test Cases
+
+```js
+{
+  const test_cases = [
+      {name: '3', args: [3], expected: 3},
+      {name: 'null', args: [null], expected: 'object'},
+      {name: 'true', args: [true], expected: '1'},
+      {name: 'false', args: [false], expected: '0'},
+    ];
+  function to_string(a) {
+    return String(a);
+  }
+  run_tests(to_string, test_cases);
+}
+```
+
 
 ### Plus
 
@@ -101,7 +119,7 @@ function run_tests(_target, _cases) {
       {name: 'number, number', args: [1, -1], expected: 0},
       {name: 'true, number', args: [true, 1], expected: 2},
       {name: 'false, number', args: [false, 1], expected: 1},
-      {name: 'null, number', args: [null, 1], expected: 0},
+      {name: 'null, number', args: [null, 1], expected: 1},
       {name: 'undefined, number', args: [undefined, 1], expected: NaN},
     ];
   function plus(a, b) {
@@ -178,7 +196,7 @@ Writing test cases just happens to be the other best way to understand how code 
 ```js
 {
   const test_cases = [
-      {name: 'null', args: [null], expected: 'null'},
+      {name: 'null', args: [null], expected: 'object'},
       {name: 'undefined', args: [undefined], expected: 'undefined'},
       /* write 6 more passing test cases */
     ];
