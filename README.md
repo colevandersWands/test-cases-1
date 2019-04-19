@@ -4,7 +4,7 @@
 
 ### Index:
 * [describing behavior](#describing-behavior)
-* [run\_tests function](#run--tests-function)
+* [run\_tests function](#run-tests-function)
 * [examples to study](#examples-to-study)
     * [failing test cases](#failing-test-cases)
     * [plus](#plus)
