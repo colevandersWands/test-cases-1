@@ -96,13 +96,13 @@ function run_tests(_target, _cases) {
   const test_cases = [
       {name: 'string, number', args: ['e', 1], expected: 'e1'},
       {name: 'string, null', args: ['e', null], expected: 'enull'},
-      {name: 'string, undefined', args: ['e', undefined], expected: 'eundefined'},},
-      {name: 'string, boolean', args: ['e', false], expected: 'efalse'},},
-      {name: 'number, number', args: [1, -1], expected: 0},},
-      {name: 'true, number', args: [true, 1], expected: 2},}
-      {name: 'false, number', args: [false, 1], expected: 1},}
-      {name: 'null, number', args: [null, 1], expected: 0},}
-      {name: 'undefined, number', args: [undefined, 1], expected: NaN},}
+      {name: 'string, undefined', args: ['e', undefined], expected: 'eundefined'},
+      {name: 'string, boolean', args: ['e', false], expected: 'efalse'},
+      {name: 'number, number', args: [1, -1], expected: 0},
+      {name: 'true, number', args: [true, 1], expected: 2},
+      {name: 'false, number', args: [false, 1], expected: 1},
+      {name: 'null, number', args: [null, 1], expected: 0},
+      {name: 'undefined, number', args: [undefined, 1], expected: NaN},
     ];
   function plus(a, b) {
     return a + b;
