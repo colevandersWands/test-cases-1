@@ -91,6 +91,7 @@ function run_tests(_target, _cases) {
 
 ### Failing Test Cases
 
+notice: in all of these exercises it is your test cases that need to change if they fail.  JS operators are always right, you must change your expectations until they match the actual behavior.
 ```js
 {
   const test_cases = [
