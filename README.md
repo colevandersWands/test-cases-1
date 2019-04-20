@@ -80,6 +80,8 @@ function run_tests(_target, _cases) {
       console.log(`%cactual: ${typeof actual},`, 'color:red', actual);
       console.log(`%cexpected: ${typeof expected},`, 'color:green', expected);
       console.groupEnd();
+    } else {
+      console.log(`%cPassed: ${t_case.name}!`, 'color:green');
     };
   };
 };
