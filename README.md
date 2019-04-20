@@ -12,6 +12,8 @@
 * [exercises](#exercises)
     * [strict equality](#strict-equality)
     * [typeof](#typeof)
+    * [boolean](#boolean)
+    * [number](#number)
     * [or](#or)
     * [and](#and)
     * [not](#not)
@@ -210,6 +212,42 @@ Writing test cases just happens to be the other best way to understand how code 
 
 [TOP](#test-cases)
 
+### Boolean
+
+```js
+{
+  const test_cases = [
+      {name: 'null', args: [null], expected: false},
+      {name: 'undefined', args: [undefined], expected: false},
+      /* write 10 more passing test cases */
+    ];
+  function to_boolean(a) {
+    return Boolean(a);
+  }
+  run_tests(to_boolean, test_cases);
+}
+```
+
+[TOP](#test-cases)
+
+### Number
+
+```js
+{
+  const test_cases = [
+      {name: 'null', args: [null], expected: 0},
+      {name: 'undefined', args: [undefined], expected: NaN},
+      /* write 10 more passing test cases */
+    ];
+  function to_number(a) {
+    return Number(a);
+  }
+  run_tests(to_number, test_cases);
+}
+```
+
+[TOP](#test-cases)
+
 ### or
 
 [replication](https://github.com/janke-learning/truthiness#or-operator)  
@@ -309,8 +347,9 @@ rules for implicit coercion:
       {name: 'true, 1', args: [true, 1], expected: false},
       {name: 'false, 0', args: [false, 0], expected: false},
       {name: 'false, 1', args: [false, 1], expected: false},
-      /* write 6 more passing test cases without NaN values*/
-      /* write 4 more passing test cases with NaN values*/
+      /* write 4 more passing test cases with only strings */
+      /* write 6 more passing test cases without NaN values */
+      /* write 4 more passing test cases with NaN values */
     ];
   function greater_than(a, b) {
     return a > b;
@@ -336,6 +375,7 @@ rules for implicit coercion:
       {name: 'true, 1', args: [true, 1], expected: false},
       {name: 'false, 0', args: [false, 0], expected: false},
       {name: 'false, 1', args: [false, 1], expected: true},
+      /* write 4 more passing test cases with only strings */
       /* write 6 more passing test cases without NaN values*/
       /* write 4 more passing test cases with NaN values*/
     ];
