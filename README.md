@@ -253,7 +253,6 @@ Writing test cases just happens to be the other best way to understand how code 
 ### or
 
 [replication](https://github.com/janke-learning/truthiness#or-operator)  
-[more replications](https://github.com/janke-learning/boolean-by-example#replicate-or)  
 ```js
 {
   const test_cases = [
@@ -275,7 +274,6 @@ Writing test cases just happens to be the other best way to understand how code 
 ### and
 
 [replication](https://github.com/janke-learning/truthiness#and-operator)  
-[more replications](https://github.com/janke-learning/boolean-by-example#replicate-and)  
 ```js
 {
   const test_cases = [
@@ -297,7 +295,6 @@ Writing test cases just happens to be the other best way to understand how code 
 ### not
 
 [replication](https://github.com/janke-learning/truthiness#not-operator)  
-[more replications](https://github.com/janke-learning/boolean-by-example#not)  
 ```js
 {
   const test_cases = [
@@ -317,7 +314,6 @@ Writing test cases just happens to be the other best way to understand how code 
 ### ternary
 
 [replication](https://github.com/janke-learning/truthiness#not-operator)  
-[more replications](https://github.com/janke-learning/boolean-by-example#not)  
 ```js
 {
   const test_cases = [
