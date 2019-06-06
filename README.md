@@ -171,7 +171,7 @@ notice: in all of these exercises it is your test cases that need to change if t
 
 ## Exercises
 
-These exercises are a bit backwards, usually you will write complete test cases then make sure your code passes them.  To complete these exercises you will be writing test cases that pass functions we give you.  If a test case fails it's the the test case that is wrong, go back to that case and fix it.
+These exercises are a bit backwards, usually as a developer you will write complete test cases then make sure your code passes them.  To complete these exercises you will be writing test cases that pass functions we give you.  If a test case fails it's the the test case that is wrong, go back to that case and fix it.
 
 Writing test cases just happens to be the other best way to understand how code works.  The first best way is to [rewrite it yourself](https://blog.codinghorror.com/when-understanding-means-rewriting/) like in the Implicit Coercion exercises.
 
