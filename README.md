@@ -53,6 +53,43 @@ Study it for a minute then paste it in the console, the exercises below won't wo
 
 ```js
 function run_tests(_target, _cases) {
+  console.groupCollapsed('<- click this arrow to see the function')
+  console.log(_target.toString());
+  console.groupEnd();
+  for (let t_case of _cases) {
+    
+    // prep variables for convenience
+    const expected = t_case.expected;
+    const args = t_case.args;
+    
+    // run function with test case
+    const actual = _target(...args);
+
+    // compare
+    let pass;
+    if (typeof expected === 'object' && expected !== null) {
+      const _actual = JSON.stringify(actual);
+      const _expected = JSON.stringify(expected);
+      pass = _actual === _expected;
+    } else if ( typeof expected === 'number' && isNaN(expected) ) {
+      pass = isNaN(actual) && typeof actual === 'number';
+    } else {
+      pass = actual === expected;
+    };
+
+    // communicate result to developer 
+    if (!pass) {
+      console.groupCollapsed(`%c  ${t_case.name}:`, 'color:red');
+      console.log(`%cactual: ${typeof actual},`, 'color:orange', actual);
+      console.log(`%cexpected: ${typeof expected},`, 'color:blue', expected);
+      console.groupEnd();
+    } else {
+      console.groupCollapsed(`%cPassed: ${t_case.name}!`, 'color:green');
+      console.log(`result: ${typeof actual},`, actual);
+      console.groupEnd();
+    };
+  };
+}
   for (let t_case of _cases) {
     
     // prep variables for convenience
@@ -81,10 +118,12 @@ function run_tests(_target, _cases) {
       console.log(`%cexpected: ${typeof expected},`, 'color:blue', expected);
       console.groupEnd();
     } else {
-      console.log(`%cPassed: ${t_case.name}!`, 'color:green');
+      console.groupCollapsed(`%cPassed: ${t_case.name}!`, 'color:green');
+      console.log(`result: ${typeof actual},`, actual);
+      console.groupEnd();
     };
   };
-};
+}
 ```
 
 [TOP](#test-cases)
