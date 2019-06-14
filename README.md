@@ -1,6 +1,6 @@
 # Test Cases
 
-
+Learn about test cases, a great way to understand code.  And learn a bit out JS operators while you're at it.
 
 ### Index:
 * [describing behavior](#describing-behavior)
@@ -40,6 +40,10 @@ test_cases = [
     {name:'another test case', args:['different', 'inputs'], expected: 'the expected output'},
   ];
 ```
+
+> DISCLAIMER: 
+> * In this exercise you are learning to write test cases for existing code.  The code is always right. If your test fails, change it.   
+> * In the real world it will usually be the oposite. The tests should descibe the code.  If the tests fail, change the code.
 
 [TOP](#test-cases)
 
