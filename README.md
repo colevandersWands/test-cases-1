@@ -87,13 +87,13 @@ function run_tests(_target, _cases) {
       console.groupCollapsed(`%cPASS: ${t_case.name}`, 'color:green');
     } else {
       console.groupCollapsed(`%c: ${t_case.name}`, 'color:red');
-      console.log("%cexpected: ",  'color:orange', typeof expected, expected);
+      console.log("%cactual: ",  'color:orange', typeof actual +", "+ actual);
     };
 
     for (let i = 0; i < args.length; i++) {
       console.log(`arg ${i+1}: ${typeof args[i]},`, args[i]);
     }
-    console.log("%cactual: ", 'color:blue', typeof actual, actual);
+    console.log("%cexpected: ", 'color:blue', typeof expected +", "+ expected);
     console.groupEnd();
   };
 }
