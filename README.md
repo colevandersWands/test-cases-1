@@ -1,11 +1,10 @@
 # Test Cases
 
-These exercises are a bit backwards, usually as a developer you will write complete test cases then make sure your code passes them.  To complete these exercises you will be writing test cases that pass functions we give you.  If a test case fails it's the the test case that is wrong, go back to that case and fix it.
+These exercises are a bit backwards, usually as a developer you will write complete test cases then make sure your code passes them.  Since these exercises are also designed to help you understand JavaScript operaotrs, you will be writing test cases that pass code we give you.  If a test case fails it's the the test case that is wrong, go back to that case and fix it.
 
 Writing test cases just happens to be the other best way to understand how code works.  The first best way is to [rewrite it yourself](https://blog.codinghorror.com/when-understanding-means-rewriting/) like in the Implicit Coercion exercises.
 
 (test cases for these exercises should be limited to primitive types - Number, Boolean, String, Null, Undefined)
-
 
 ### Index:
 * [describing behavior](#describing-behavior)
@@ -38,6 +37,10 @@ test_cases = [
     {name:'another test case', args:['different', 'inputs'], expected: 'the expected output'},
   ];
 ```
+
+> DISCLAIMER: 
+> * In this exercise you are learning to write test cases for existing code.  The code is always right. If your test fails, change it.   
+> * In the real world it will usually be the oposite. The tests should descibe the code.  If the tests fail, change the code.
 
 [TOP](#test-cases)
 
@@ -81,13 +84,13 @@ function run_tests(_target, _cases) {
       console.groupCollapsed(`%cPASS: ${t_case.name}`, 'color:green');
     } else {
       console.groupCollapsed(`%c: ${t_case.name}`, 'color:red');
-      console.log("%cexpected: ",  'color:orange', typeof expected, expected);
+      console.log("%cactual: ",  'color:orange', typeof actual +", "+ actual);
     };
 
     for (let i = 0; i < args.length; i++) {
       console.log(`arg ${i+1}: ${typeof args[i]},`, args[i]);
     }
-    console.log("%cactual: ", 'color:blue', typeof actual, actual);
+    console.log("%cexpected: ", 'color:blue', typeof expected +", "+ expected);
     console.groupEnd();
   };
 }
