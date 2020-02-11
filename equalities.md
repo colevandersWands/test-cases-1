@@ -46,7 +46,7 @@ Before moving on, check out the instructions and copy the ```run_tests``` functi
       /* write 8 more passing test cases */
     ];
   function strict_inequality(a, b) {
-    return a === b;
+    return a !== b;
   }
   run_tests(strict_inequality, test_cases);
 }
